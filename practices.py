@@ -1,6 +1,9 @@
-# # username generator
-
+import utils.session
 import random
+import math
+
+
+# username generator
 
 def generate_username():
     full_name = input("Enter your full name: ")
@@ -139,3 +142,42 @@ def check_even_odd():
         return "Invalid number"
     
 print(check_even_odd())
+
+
+# Area Calculator
+
+def calculate_area():
+    print("Choose  a shape to calculate area")
+    print("1. Circle")
+    print("2. Square")
+    print("3. Triangle")
+    print("4. Rectangle")
+    
+    choice = input("Enter your choice (1/2/3/4) : ")
+    
+    try:
+        if choice == "1":
+            radius = float(input("Enter the radius of the circle: "))
+            area = math.pi * (radius ** 2)
+            return area
+        elif choice == "2":
+            width = float(input("Enter the width of length: "))
+            area = width ** 2
+            return area
+        elif choice == "3":
+            height = float(input("Enter the height of triangle: "))
+            base = float(input("Enter the base of triangle: "))
+            area = 1/2 * height * base
+            return area
+        elif choice == "4":
+            length = float(input('Enter the length of rectangle: '))
+            width = float(input("Enter the width of rectangle: "))
+            area = length * width
+            return area
+        else:
+            return "You haven't entered any choice"    
+                      
+    except ValueError:
+        return "Invalid value"
+    
+print(calculate_area())    
