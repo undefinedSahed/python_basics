@@ -123,3 +123,19 @@ def calculate_operation():
         return "Invalid number"
     
 print(calculate_operation())
+
+
+# Odd/Even Detector
+
+def check_even_odd():
+    try: 
+        given_number = int(input("Enter a number "))
+        
+        if given_number % 2 == 0:
+            return f"You entered {given_number} which is an even number"
+        else :
+            return f"You entered {given_number} which is an odd number"
+    except ValueError:
+        return "Invalid number"
+    
+print(check_even_odd())
